@@ -43,15 +43,23 @@
         </li>
       </ul>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        @auth
+        <li class="nav-item">
+          <a class="nav-link" href="#">Logout</a>
+      </li>
+      <li class="nav-item">
+          <a class="nav-link" href="#">Alec</a>
+      </li>
+      @endauth
+      @guest
       <li class="nav-item">
           <a class="nav-link" href="#">Login</a>
       </li>
       <li class="nav-item">
           <a class="nav-link" href="{{route('register')}}">Register</a>
       </li>
-      <li class="nav-item">
-          <a class="nav-link" href="#">Logout</a>
-      </li>
+      @endguest
+      
       </ul>
       
     </div>
